@@ -18,7 +18,7 @@ public abstract class MovementController : MonoBehaviour
     [SerializeField] private float groundCheckYOffset = -0.5f;
     [SerializeField] private float groundCheckXOffset = -0.5f;
     [SerializeField] private Vector2 groundCheckSize = new Vector2(0.4f, 0.1f);
-    [SerializeField] private LayerMask groundCheckMask;
+    [SerializeField] private LayerMask[] groundCheckMask;
 
     [Space]
     [Header("Gravity Settings")]
@@ -160,7 +160,15 @@ public abstract class MovementController : MonoBehaviour
 
     internal virtual bool GroundCheck()
     {
-        return Physics2D.OverlapBox(groundCheckPos, groundCheckSize, transform.eulerAngles.z, groundCheckMask);
+        foreach (var mask in groundCheckMask)
+        {
+            var grounded = Physics2D.OverlapBox(groundCheckPos, groundCheckSize, transform.eulerAngles.z, mask);
+            if (grounded)
+            {
+                return true;
+            }
+        }
+        return false;
     }
     
     private void GetInputs()

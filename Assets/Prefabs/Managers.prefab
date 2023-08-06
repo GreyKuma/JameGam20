@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8236483777379629548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8236483777379629539}
+  - component: {fileID: 8236483777379629538}
+  - component: {fileID: 8236483777379629549}
+  - component: {fileID: 8236483777379629536}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8236483777379629539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236483777379629548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8236483777379629538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236483777379629548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c687d380859db44a4d89a14f60573b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputAsset: {fileID: -944628639613478452, guid: 6acbf2149fddfaf42b4e45b2c601c357, type: 3}
+--- !u!114 &8236483777379629549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236483777379629548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfc3e4fa4b7fc64ebf3ecae7836a124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputManager: {fileID: 8236483777379629538}
+  playerController: {fileID: 7901546340693910155, guid: 6eb1a30a0ce89f44e8a95394ecebcadf, type: 3}
+--- !u!114 &8236483777379629536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8236483777379629548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2effe2258b6f8d04892646fbb0c374e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _obstaclePrefab: {fileID: 4814934312793820154, guid: feb338d859b9f784a9281e7ff94d5098, type: 3}
+  _obstacleSpawnPosition: {x: 10, y: 1.5, z: 0}
+  _spikePrefab: {fileID: 4119112936270743830, guid: 3f3b30fde40403d46948c34637f2c6c0, type: 3}
+  _spikeSpawnPosition: {x: 10, y: 1.5, z: 0}
+  _playerPrefab: {fileID: 7901546340693910150, guid: 6eb1a30a0ce89f44e8a95394ecebcadf, type: 3}
+  _playerSpawnPosition: {x: 0, y: 1.5, z: 0}
+  _playerPipesPrefab: {fileID: 8716777649168165488, guid: b2cde73ae73174e499d7ec9e6f48a539, type: 3}
+  _playerPipesSpawnPosition: {x: 0, y: 1.5, z: 0}
+  _playerWithPipesSprite: {fileID: 21300000, guid: dde2ef1240a5457459c61d6eb5ba4c31, type: 3}
+  _playerGracePeriod: 2
+  _obstacleSpawnDelay: 5
+  _obstacleSpawnDelayVariance: 5
+  _spikeSpawnDelay: 10
+  _spikeSpawnDelayVariance: 10
+  _levelDuration: 5
